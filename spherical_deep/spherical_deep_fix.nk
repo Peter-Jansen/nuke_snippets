@@ -2,7 +2,7 @@
 version 13.2 v1
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="-203" y="115" w="1917" h="1008" screen="0">
+    <window x="0" y="0" w="1917" h="1008" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
@@ -15,14 +15,14 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                     <page id="Viewer.1"/>
                 </dock>
                 <split size="399"/>
-                <dock id="" activePageId="DAG.1">
+                <dock id="" activePageId="DAG.1" focus="true">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
                 </dock>
             </splitter>
             <split size="615"/>
-            <dock id="" activePageId="Properties.1" focus="true">
+            <dock id="" activePageId="Properties.1">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.backgroundrenderview.1"/>
             </dock>
@@ -109,7 +109,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-set Nb99b1800 [stack 0]
+set Ne0411400 [stack 0]
 PostageStamp {
  name Stamp8
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -208,7 +208,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-set Nb99b0c00 [stack 0]
+set Ne0410800 [stack 0]
 Camera {
  projection_mode {{"\[expression \[value the_cam]projection_mode(\[value the_frame])]"}}
  focal {{"\[expression \[value the_cam]focal(\[value the_frame])]"}}
@@ -395,7 +395,7 @@ Scene {
  xpos -1076
  ypos 295
 }
-set Nf1d3e000 [stack 0]
+set N9b519c00 [stack 0]
 Reformat {
  inputs 0
  format "2000 1000 0 0 2000 1000 1 "
@@ -446,7 +446,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-set Nf1d3d000 [stack 0]
+set N9b518c00 [stack 0]
 NoOp {
  name Stamp11
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -498,7 +498,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $Nb99b1800
+push $Ne0411400
 PostageStamp {
  name Stamp9
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -560,7 +560,7 @@ DeepRead {
  xpos 472
  ypos -605
 }
-set Nf1d3c400 [stack 0]
+set N9bd7fc00 [stack 0]
 DeepRecolor {
  inputs 2
  name DeepRecolor1
@@ -572,7 +572,7 @@ Dot {
  xpos 506
  ypos -162
 }
-set Nf207f800 [stack 0]
+set N9bd7f400 [stack 0]
 DeepExpression {
  chans1 deep
  deep.front "hypot(hypot(P.red, P.green), P.blue)"
@@ -586,7 +586,7 @@ DeepMerge2 {
  xpos -210
  ypos -19
 }
-push $Nf1d3d000
+push $N9b518c00
 NoOp {
  name Stamp12
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -638,7 +638,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $Nf207f800
+push $N9bd7f400
 DeepExpression {
  chans1 deep
  deep.front "hypot(hypot(P.red/rgba.alpha, P.green/rgba.alpha), P.blue/rgba.alpha)"
@@ -653,7 +653,7 @@ DeepMerge2 {
  xpos 104
  ypos -29
 }
-push $Nb99b0c00
+push $Ne0410800
 Camera {
  projection_mode {{"\[expression \[value the_cam]projection_mode(\[value the_frame])]"}}
  focal {{"\[expression \[value the_cam]focal(\[value the_frame])]"}}
@@ -740,8 +740,8 @@ Camera {
  addUserKnob {26 line2 l "" +STARTLINE}
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
 }
-push $Nf1d3e000
-push $Nb99b1800
+push $N9b519c00
+push $Ne0411400
 add_layer {P P.red P.green P.blue P.x P.y P.z}
 Shuffle2 {
  fromInput1 {{0} B}
@@ -775,7 +775,7 @@ StickyNote {
  xpos -1591
  ypos 363
 }
-push $Nf1d3d000
+push $N9b518c00
 NoOp {
  name Stamp5
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -827,7 +827,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $Nb99b0c00
+push $Ne0410800
 Camera {
  projection_mode {{"\[expression \[value the_cam]projection_mode(\[value the_frame])]"}}
  focal {{"\[expression \[value the_cam]focal(\[value the_frame])]"}}
@@ -920,7 +920,7 @@ Axis3 {
  xpos 613
  ypos 186
 }
-push $Nf1d3d000
+push $N9b518c00
 NoOp {
  name Stamp6
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -972,7 +972,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $Nf207f800
+push $N9bd7f400
 DeepExpression {
  temp_name0 dist
  temp_expr0 "sqrt( pow2((P.red/rgba.alpha) - \[value cpx]) + pow2((P.green/rgba.alpha) - \[value cpy]) + pow2((P.blue/rgba.alpha) - \[value cpz]) )"
@@ -997,7 +997,7 @@ DeepMerge2 {
  xpos 472
  ypos 782
 }
-push $Nf1d3d000
+push $N9b518c00
 NoOp {
  name Stamp13
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -1049,14 +1049,14 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $Nf207f800
+push $N9bd7f400
 DeepMerge2 {
  inputs 2
  name DeepMerge2
  xpos 84
  ypos -205
 }
-push $Nf1d3d000
+push $N9b518c00
 NoOp {
  name Stamp7
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -1108,7 +1108,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $Nb99b0c00
+push $Ne0410800
 Camera {
  projection_mode {{"\[expression \[value the_cam]projection_mode(\[value the_frame])]"}}
  focal {{"\[expression \[value the_cam]focal(\[value the_frame])]"}}
@@ -1195,7 +1195,7 @@ Camera {
  addUserKnob {26 line2 l "" +STARTLINE}
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
 }
-push $Nf207f800
+push $N9bd7f400
 Group {
  inputs 2
  name deep_unfuckify
@@ -1265,7 +1265,7 @@ StickyNote {
  xpos 1377
  ypos 351
 }
-push $Nf1d3d000
+push $N9b518c00
 NoOp {
  name Stamp14
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -1328,8 +1328,8 @@ Read {
  xpos 1229
  ypos -531
 }
-set Nf1e4c400 [stack 0]
-push $Nb99b1800
+set N9bcca000 [stack 0]
+push $Ne0411400
 PostageStamp {
  name Stamp10
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -1395,7 +1395,7 @@ Shuffle2 {
  xpos 1027
  ypos -507
 }
-push $Nf1d3c400
+push $N9bd7fc00
 DeepRecolor {
  inputs 2
  channels all
@@ -1417,7 +1417,7 @@ DeepMerge2 {
  xpos 1167
  ypos -194
 }
-push $Nf1e4c400
+push $N9bcca000
 Viewer {
  inputs 2
  frame_range 1-100
