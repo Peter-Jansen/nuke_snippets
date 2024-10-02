@@ -2,7 +2,7 @@
 version 13.2 v1
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="0" w="1917" h="1008" screen="0">
+    <window x="-203" y="115" w="1917" h="1008" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
@@ -15,14 +15,14 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                     <page id="Viewer.1"/>
                 </dock>
                 <split size="399"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
                 </dock>
             </splitter>
             <split size="615"/>
-            <dock id="" activePageId="Properties.1">
+            <dock id="" activePageId="Properties.1" focus="true">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.backgroundrenderview.1"/>
             </dock>
@@ -57,6 +57,17 @@ BackdropNode {
  ypos -333
  bdwidth 593
  bdheight 442
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode2
+ tile_color 0xaaaaaa00
+ label "OD big brain"
+ note_font_size 42
+ xpos 965
+ ypos -663
+ bdwidth 461
+ bdheight 549
 }
 Read {
  inputs 0
@@ -98,7 +109,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-set N80e35000 [stack 0]
+set Nb99b1800 [stack 0]
 PostageStamp {
  name Stamp8
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -197,7 +208,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-set Nbe751c00 [stack 0]
+set Nb99b0c00 [stack 0]
 Camera {
  projection_mode {{"\[expression \[value the_cam]projection_mode(\[value the_frame])]"}}
  focal {{"\[expression \[value the_cam]focal(\[value the_frame])]"}}
@@ -384,7 +395,7 @@ Scene {
  xpos -1076
  ypos 295
 }
-set N80e37000 [stack 0]
+set Nf1d3e000 [stack 0]
 Reformat {
  inputs 0
  format "2000 1000 0 0 2000 1000 1 "
@@ -435,7 +446,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-set N80e36000 [stack 0]
+set Nf1d3d000 [stack 0]
 NoOp {
  name Stamp11
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -487,7 +498,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $N80e35000
+push $Nb99b1800
 PostageStamp {
  name Stamp9
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -497,7 +508,7 @@ PostageStamp {
  tile_color 0x1000001
  note_font Verdana
  note_font_size 20
- xpos 278
+ xpos 318
  ypos -416
  hide_input true
  addUserKnob {20 wired_tab l "Wired Stamp"}
@@ -549,6 +560,7 @@ DeepRead {
  xpos 472
  ypos -605
 }
+set Nf1d3c400 [stack 0]
 DeepRecolor {
  inputs 2
  name DeepRecolor1
@@ -560,7 +572,7 @@ Dot {
  xpos 506
  ypos -162
 }
-set N80e34400 [stack 0]
+set Nf207f800 [stack 0]
 DeepExpression {
  chans1 deep
  deep.front "hypot(hypot(P.red, P.green), P.blue)"
@@ -574,7 +586,7 @@ DeepMerge2 {
  xpos -210
  ypos -19
 }
-push $N80e36000
+push $Nf1d3d000
 NoOp {
  name Stamp12
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -626,7 +638,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $N80e34400
+push $Nf207f800
 DeepExpression {
  chans1 deep
  deep.front "hypot(hypot(P.red/rgba.alpha, P.green/rgba.alpha), P.blue/rgba.alpha)"
@@ -641,7 +653,7 @@ DeepMerge2 {
  xpos 104
  ypos -29
 }
-push $Nbe751c00
+push $Nb99b0c00
 Camera {
  projection_mode {{"\[expression \[value the_cam]projection_mode(\[value the_frame])]"}}
  focal {{"\[expression \[value the_cam]focal(\[value the_frame])]"}}
@@ -728,8 +740,8 @@ Camera {
  addUserKnob {26 line2 l "" +STARTLINE}
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
 }
-push $N80e37000
-push $N80e35000
+push $Nf1d3e000
+push $Nb99b1800
 add_layer {P P.red P.green P.blue P.x P.y P.z}
 Shuffle2 {
  fromInput1 {{0} B}
@@ -763,7 +775,7 @@ StickyNote {
  xpos -1591
  ypos 363
 }
-push $N80e36000
+push $Nf1d3d000
 NoOp {
  name Stamp5
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -815,7 +827,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $Nbe751c00
+push $Nb99b0c00
 Camera {
  projection_mode {{"\[expression \[value the_cam]projection_mode(\[value the_frame])]"}}
  focal {{"\[expression \[value the_cam]focal(\[value the_frame])]"}}
@@ -908,7 +920,7 @@ Axis3 {
  xpos 613
  ypos 186
 }
-push $N80e36000
+push $Nf1d3d000
 NoOp {
  name Stamp6
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -960,7 +972,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $N80e34400
+push $Nf207f800
 DeepExpression {
  temp_name0 dist
  temp_expr0 "sqrt( pow2((P.red/rgba.alpha) - \[value cpx]) + pow2((P.green/rgba.alpha) - \[value cpy]) + pow2((P.blue/rgba.alpha) - \[value cpz]) )"
@@ -985,7 +997,7 @@ DeepMerge2 {
  xpos 472
  ypos 782
 }
-push $N80e36000
+push $Nf1d3d000
 NoOp {
  name Stamp13
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -1037,14 +1049,14 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $N80e34400
+push $Nf207f800
 DeepMerge2 {
  inputs 2
  name DeepMerge2
  xpos 84
  ypos -205
 }
-push $N80e36000
+push $Nf1d3d000
 NoOp {
  name Stamp7
  help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
@@ -1096,7 +1108,7 @@ NoOp {
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
  addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
 }
-push $Nbe751c00
+push $Nb99b0c00
 Camera {
  projection_mode {{"\[expression \[value the_cam]projection_mode(\[value the_frame])]"}}
  focal {{"\[expression \[value the_cam]focal(\[value the_frame])]"}}
@@ -1183,7 +1195,7 @@ Camera {
  addUserKnob {26 line2 l "" +STARTLINE}
  addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
 }
-push $N80e34400
+push $Nf207f800
 Group {
  inputs 2
  name deep_unfuckify
@@ -1239,13 +1251,6 @@ DeepMerge2 {
  xpos 1403
  ypos 820
 }
-Viewer {
- frame_range 1-100
- monitorOutOutputTransform rec709
- name Viewer1
- xpos 642
- ypos 1097
-}
 StickyNote {
  inputs 0
  name StickyNote3
@@ -1259,4 +1264,166 @@ StickyNote {
  label "turn it into a nice lil group"
  xpos 1377
  ypos 351
+}
+push $Nf1d3d000
+NoOp {
+ name Stamp14
+ help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
+ onCreate "if nuke.GUI:\n    try:\n        import stamps; stamps.wiredOnCreate()\n    except:\n        pass\n"
+ knobChanged "import stamps; stamps.wiredKnobChanged()"
+ autolabel "nuke.thisNode().knob(\"title\").value()"
+ tile_color 0x1000001
+ note_font Verdana
+ note_font_size 20
+ xpos 1258
+ ypos -322
+ hide_input true
+ addUserKnob {20 wired_tab l "Wired Stamp"}
+ addUserKnob {26 identifier -STARTLINE +HIDDEN T wired}
+ addUserKnob {3 lockCallbacks l "" +STARTLINE +HIDDEN}
+ addUserKnob {6 toReconnect -STARTLINE +HIDDEN}
+ addUserKnob {1 title l Title: t "Displayed name on the Node Graph for this Stamp and its Anchor.\nIMPORTANT: This is only for display purposes, and is different from the real/internal name of the Stamps."}
+ title nuke_deep
+ addUserKnob {26 prev_title l "" +STARTLINE +HIDDEN T nuke_deep}
+ addUserKnob {26 tags l Tags: t "Tags of this stamp's Anchor, for information purpose only.\nClick \"show anchor\" to change them." T "<i>2D, Deep</i>"}
+ addUserKnob {26 backdrops l Backdrops: t "Labels of backdrop nodes which contain this stamp's Anchor." +HIDDEN T " "}
+ addUserKnob {26 line1 l "" +STARTLINE}
+ addUserKnob {6 postageStamp_show l "postage stamp" t "Enable the postage stamp thumbnail in this node.\nYou're seeing this because the class of this node includes the postage_stamp knob." +HIDDEN +STARTLINE}
+ addUserKnob {26 anchor_label l Anchor: T " "}
+ addUserKnob {22 show_anchor l " show anchor " t "Show the properties panel for this Stamp's Anchor." -STARTLINE T stamps.wiredShowAnchor()}
+ addUserKnob {22 zoom_anchor l "zoom anchor" t "Navigate to this Stamp's Anchor on the Node Graph." -STARTLINE T stamps.wiredZoomAnchor()}
+ addUserKnob {26 stamps_label l Stamps: T " "}
+ addUserKnob {22 zoomNext l " zoom next " t "Navigate to this Stamp's next sibling on the Node Graph." -STARTLINE T stamps.wiredZoomNext()}
+ addUserKnob {22 selectSimilar l " select similar " t "Select all similar Stamps to this one on the Node Graph." -STARTLINE T stamps.wiredSelectSimilar()}
+ addUserKnob {26 space_1 l "" +STARTLINE T " "}
+ addUserKnob {26 reconnect_label l Reconnect: t "Reconnect by the stored Anchor name." T " "}
+ addUserKnob {22 reconnect_this l this t "Reconnect this Stamp to its Anchor, by its stored Anchor name." -STARTLINE T "n = nuke.thisNode()\ntry:\n    n.setInput(0,nuke.toNode(n.knob(\"anchor\").value()))\nexcept:\n    nuke.message(\"Unable to reconnect.\")\ntry:\n    import stamps\n    stamps.wiredGetStyle(n)\nexcept:\n    pass\n"}
+ addUserKnob {22 reconnect_similar l similar t "Reconnect this Stamp and similar ones to their Anchor, by their stored anchor name." -STARTLINE T stamps.wiredReconnectSimilar()}
+ addUserKnob {22 reconnect_all l all t "Reconnect all the Stamps to their Anchors, by their stored anchor names." -STARTLINE T stamps.wiredReconnectAll()}
+ addUserKnob {26 space_2 l "" +STARTLINE T " "}
+ addUserKnob {20 advanced_reconnection l "Advanced Reconnection" n 2}
+ addUserKnob {26 reconnect_by_title_label l "<font color=gold>By Title:" t "Reconnect by searching for a matching title." T " "}
+ addUserKnob {22 reconnect_by_title_this l this t "Look for an Anchor that shares this Stamp's title, and connect this Stamp to it.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectByTitle()}
+ addUserKnob {22 reconnect_by_title_similar l similar t "Look for an Anchor that shares this Stamp's title, and connect this Stamp and similar ones to it.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectByTitleSimilar()}
+ addUserKnob {22 reconnect_by_title_selected l selected t "For each Stamp selected, look for an Anchor that shares its title, and connect to it.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectByTitleSelected()}
+ addUserKnob {26 reconnect_by_selection_label l "<font color=orangered>By Selection:" t "Force reconnect to a selected Anchor." T " "}
+ addUserKnob {22 reconnect_by_selection_this l this t "Force reconnect this Stamp to a selected Anchor, whatever its name or title.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectBySelection()}
+ addUserKnob {22 reconnect_by_selection_similar l similar t "Force reconnect this Stamp and similar ones to a selected Anchor, whatever its name or title.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectBySelectionSimilar()}
+ addUserKnob {22 reconnect_by_selection_selected l selected t "Force reconnect all selected Stamps to an also selected Anchor, whatever its name or title.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectBySelectionSelected()}
+ addUserKnob {1 anchor l Anchor}
+ anchor Anchor_3fbc4b221d
+ addUserKnob {6 auto_reconnect_by_title l "<font color=#ED9977>&nbsp; auto-reconnect by title" t "When creating this stamp again (like on copy-paste), auto-reconnect it by title instead of doing it by the saved anchor's name, and auto-turn this off immediately.\nIMPORTANT: Should be off by default. Only use this for setting up templates." +STARTLINE}
+ addUserKnob {26 line2 l "" +STARTLINE}
+ addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
+ addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
+}
+Read {
+ inputs 0
+ file_type exr
+ file "\[file dirname \[value root.name]]/sphericalDeepKarma_v003.exr.sphere.0001.exr"
+ localizationPolicy off
+ format "2000 1000 0 0 2000 1000 1 "
+ origset true
+ name Read2
+ xpos 1229
+ ypos -531
+}
+set Nf1e4c400 [stack 0]
+push $Nb99b1800
+PostageStamp {
+ name Stamp10
+ help "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021"
+ onCreate "if nuke.GUI:\n    try:\n        import stamps; stamps.wiredOnCreate()\n    except:\n        pass\n"
+ knobChanged "import stamps; stamps.wiredKnobChanged()"
+ autolabel "nuke.thisNode().knob(\"title\").value()"
+ tile_color 0x1000001
+ note_font Verdana
+ note_font_size 20
+ xpos 1027
+ ypos -567
+ hide_input true
+ addUserKnob {20 wired_tab l "Wired Stamp"}
+ addUserKnob {26 identifier -STARTLINE +HIDDEN T wired}
+ addUserKnob {3 lockCallbacks l "" +STARTLINE +HIDDEN}
+ addUserKnob {6 toReconnect -STARTLINE +HIDDEN}
+ addUserKnob {1 title l Title: t "Displayed name on the Node Graph for this Stamp and its Anchor.\nIMPORTANT: This is only for display purposes, and is different from the real/internal name of the Stamps."}
+ title render
+ addUserKnob {26 prev_title l "" +STARTLINE +HIDDEN T render}
+ addUserKnob {26 tags l Tags: t "Tags of this stamp's Anchor, for information purpose only.\nClick \"show anchor\" to change them." T <i>2D</i>}
+ addUserKnob {26 backdrops l Backdrops: t "Labels of backdrop nodes which contain this stamp's Anchor." +HIDDEN T " "}
+ addUserKnob {26 line1 l "" +STARTLINE}
+ addUserKnob {6 postageStamp_show l "postage stamp" t "Enable the postage stamp thumbnail in this node.\nYou're seeing this because the class of this node includes the postage_stamp knob." +STARTLINE}
+ addUserKnob {26 anchor_label l Anchor: T " "}
+ addUserKnob {22 show_anchor l " show anchor " t "Show the properties panel for this Stamp's Anchor." -STARTLINE T stamps.wiredShowAnchor()}
+ addUserKnob {22 zoom_anchor l "zoom anchor" t "Navigate to this Stamp's Anchor on the Node Graph." -STARTLINE T stamps.wiredZoomAnchor()}
+ addUserKnob {26 stamps_label l Stamps: T " "}
+ addUserKnob {22 zoomNext l " zoom next " t "Navigate to this Stamp's next sibling on the Node Graph." -STARTLINE T stamps.wiredZoomNext()}
+ addUserKnob {22 selectSimilar l " select similar " t "Select all similar Stamps to this one on the Node Graph." -STARTLINE T stamps.wiredSelectSimilar()}
+ addUserKnob {26 space_1 l "" +STARTLINE T " "}
+ addUserKnob {26 reconnect_label l Reconnect: t "Reconnect by the stored Anchor name." T " "}
+ addUserKnob {22 reconnect_this l this t "Reconnect this Stamp to its Anchor, by its stored Anchor name." -STARTLINE T "n = nuke.thisNode()\ntry:\n    n.setInput(0,nuke.toNode(n.knob(\"anchor\").value()))\nexcept:\n    nuke.message(\"Unable to reconnect.\")\ntry:\n    import stamps\n    stamps.wiredGetStyle(n)\nexcept:\n    pass\n"}
+ addUserKnob {22 reconnect_similar l similar t "Reconnect this Stamp and similar ones to their Anchor, by their stored anchor name." -STARTLINE T stamps.wiredReconnectSimilar()}
+ addUserKnob {22 reconnect_all l all t "Reconnect all the Stamps to their Anchors, by their stored anchor names." -STARTLINE T stamps.wiredReconnectAll()}
+ addUserKnob {26 space_2 l "" +STARTLINE T " "}
+ addUserKnob {20 advanced_reconnection l "Advanced Reconnection" n 2}
+ addUserKnob {26 reconnect_by_title_label l "<font color=gold>By Title:" t "Reconnect by searching for a matching title." T " "}
+ addUserKnob {22 reconnect_by_title_this l this t "Look for an Anchor that shares this Stamp's title, and connect this Stamp to it.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectByTitle()}
+ addUserKnob {22 reconnect_by_title_similar l similar t "Look for an Anchor that shares this Stamp's title, and connect this Stamp and similar ones to it.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectByTitleSimilar()}
+ addUserKnob {22 reconnect_by_title_selected l selected t "For each Stamp selected, look for an Anchor that shares its title, and connect to it.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectByTitleSelected()}
+ addUserKnob {26 reconnect_by_selection_label l "<font color=orangered>By Selection:" t "Force reconnect to a selected Anchor." T " "}
+ addUserKnob {22 reconnect_by_selection_this l this t "Force reconnect this Stamp to a selected Anchor, whatever its name or title.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectBySelection()}
+ addUserKnob {22 reconnect_by_selection_similar l similar t "Force reconnect this Stamp and similar ones to a selected Anchor, whatever its name or title.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectBySelectionSimilar()}
+ addUserKnob {22 reconnect_by_selection_selected l selected t "Force reconnect all selected Stamps to an also selected Anchor, whatever its name or title.\nIMPORTANT: Use this carefully, and only when the normal reconnection doesn't work." -STARTLINE T stamps.wiredReconnectBySelectionSelected()}
+ addUserKnob {1 anchor l Anchor}
+ anchor Anchor_a4d121a69
+ addUserKnob {6 auto_reconnect_by_title l "<font color=#ED9977>&nbsp; auto-reconnect by title" t "When creating this stamp again (like on copy-paste), auto-reconnect it by title instead of doing it by the saved anchor's name, and auto-turn this off immediately.\nIMPORTANT: Should be off by default. Only use this for setting up templates." +STARTLINE}
+ addUserKnob {26 line2 l "" +STARTLINE}
+ addUserKnob {22 buttonHelp l Help -STARTLINE T stamps.showHelp()}
+ addUserKnob {26 version l " " t "Stamps by Adrian Pueyo and Alexey Kuchinski.\nUpdated May 18 2021." -STARTLINE T "<a href=\"http://www.nukepedia.com/gizmos/other/stamps\" style=\"color:#666;text-decoration: none;\"><span style=\"color:#666\"> <big>Stamps v1.1</big></b></a>"}
+}
+add_layer {depth_extra depth_extra.z}
+add_layer {deepCalibration deepCalibration.red}
+Shuffle2 {
+ inputs 2
+ fromInput1 {{1} B A}
+ in1 depth_extra
+ out1 deepCalibration
+ fromInput2 {{0} B A}
+ mappings "1 depth_extra.z 0 0 deepCalibration.red 0 0"
+ name Shuffle2
+ label "\[value in1] -> \[value out1]"
+ xpos 1027
+ ypos -507
+}
+push $Nf1d3c400
+DeepRecolor {
+ inputs 2
+ channels all
+ name DeepRecolor2
+ xpos 1027
+ ypos -400
+}
+DeepExpression {
+ chans1 deep
+ deep.front deep.front/(deepCalibration.red/rgba.alpha)
+ deep.back deep.back/(deepCalibration.red/rgba.alpha)
+ name DeepExpression4
+ xpos 1027
+ ypos -282
+}
+DeepMerge2 {
+ inputs 2
+ name DeepMerge6
+ xpos 1167
+ ypos -194
+}
+push $Nf1e4c400
+Viewer {
+ inputs 2
+ frame_range 1-100
+ colour_sample_bbox {-0.1840000004 -0.2080000043 -0.1829999983 -0.2070000023}
+ monitorOutOutputTransform rec709
+ name Viewer1
+ xpos 642
+ ypos 1097
 }
